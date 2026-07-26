@@ -11,6 +11,7 @@
   --maxw: 980px;
   font-size: 16px;
 }
+
 * { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
@@ -21,75 +22,6 @@ body {
   color: var(--text);
   background: var(--bg);
   line-height: 1.65;
-  position: relative;
-}
-
-/* Quantum-inspired animated background */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: 
-    radial-gradient(circle at 20% 50%, rgba(13, 148, 136, 0.03) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(20, 33, 61, 0.02) 0%, transparent 50%),
-    radial-gradient(circle at 40% 20%, rgba(13, 148, 136, 0.02) 0%, transparent 40%);
-  pointer-events: none;
-  z-index: 1;
-  animation: quantumFlow 15s ease-in-out infinite;
-}
-
-/* Hexagonal lattice pattern overlay (representing crystalline structure) */
-body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    linear-gradient(30deg, rgba(13, 148, 136, 0.015) 1px, transparent 1px),
-    linear-gradient(150deg, rgba(13, 148, 136, 0.015) 1px, transparent 1px);
-  background-size: 60px 104px;
-  background-position: 0 0, 30px 52px;
-  pointer-events: none;
-  z-index: 1;
-  animation: latticeShift 20s linear infinite;
-}
-
-@keyframes quantumFlow {
-  0%, 100% {
-    background: 
-      radial-gradient(circle at 20% 50%, rgba(13, 148, 136, 0.03) 0%, transparent 50%),
-      radial-gradient(circle at 80% 80%, rgba(20, 33, 61, 0.02) 0%, transparent 50%),
-      radial-gradient(circle at 40% 20%, rgba(13, 148, 136, 0.02) 0%, transparent 40%);
-  }
-  50% {
-    background: 
-      radial-gradient(circle at 25% 45%, rgba(13, 148, 136, 0.04) 0%, transparent 50%),
-      radial-gradient(circle at 75% 85%, rgba(20, 33, 61, 0.025) 0%, transparent 50%),
-      radial-gradient(circle at 45% 25%, rgba(13, 148, 136, 0.025) 0%, transparent 40%);
-  }
-}
-
-@keyframes latticeShift {
-  0% {
-    background-position: 0 0, 30px 52px;
-  }
-  100% {
-    background-position: 60px 104px, 90px 156px;
-  }
-}
-
-/* Ensure content sits above background */
-header,
-main,
-footer,
-section {
-  position: relative;
-  z-index: 2;
 }
 
 a { color: var(--teal); text-decoration: none; }
@@ -186,27 +118,89 @@ nav.main-nav a.active {
 
 /* ---------- Hero ---------- */
 .hero {
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #24365f 100%);
+  position: relative;
+  overflow: hidden;
   color: #fff;
-  padding: 64px 0 56px;
+  padding: 76px 0 68px;
+  background:
+    /* teal glow, upper right */
+    radial-gradient(ellipse 60% 70% at 78% 22%, rgba(20,184,166,0.20), transparent 62%),
+    /* violet counter-glow, lower left */
+    radial-gradient(ellipse 55% 65% at 12% 92%, rgba(129,80,200,0.16), transparent 60%),
+    /* honeycomb lattice */
+    url("../assets/hero-lattice.svg"),
+    /* base */
+    linear-gradient(135deg, #0f1a33 0%, var(--navy) 42%, var(--navy-light) 78%, #263a66 100%);
+  background-size: auto, auto, 62px 107px, auto;
+  background-repeat: no-repeat, no-repeat, repeat, no-repeat;
 }
+
+/* Brillouin zone accent, right side */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -70px;
+  width: 420px;
+  height: 420px;
+  transform: translateY(-50%);
+  background: url("../assets/hero-bz.svg") center/contain no-repeat;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* fade into the page below */
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 90px;
+  background: linear-gradient(to bottom, transparent, rgba(247,248,250,0.10));
+  pointer-events: none;
+}
+
 .hero .wrap {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 44px;
   flex-wrap: wrap;
 }
+
 .hero-photo {
-  width: 176px;
-  height: 176px;
+  width: 320px;
+  height: 320px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid rgba(255,255,255,0.15);
+  /* Framing of the crop. Lower the percentage to shift the visible area upward. */
+  object-position: center 25%;
+  background: #1f2f57;
+  border: 6px solid rgba(255,255,255,0.16);
+  box-shadow: 0 0 0 1px rgba(94,234,212,0.35), 0 10px 34px rgba(0,0,0,0.32);
   flex-shrink: 0;
+}
+
+@media (max-width: 1080px) {
+  .hero::before { right: -150px; opacity: 0.35; }
+  .hero-photo { width: 280px; height: 280px; }
+}
+@media (max-width: 780px) {
+  .hero::before { display: none; }
+  .hero-photo { width: 230px; height: 230px; }
+  .hero .wrap { gap: 28px; }
+}
+.hero-text {
+  flex: 1 1 380px;
+  max-width: 600px;
 }
 .hero-text h1 {
   margin: 0 0 6px;
-  font-size: 2.2rem;
+  font-size: 2.3rem;
+  letter-spacing: -0.4px;
+  text-shadow: 0 2px 14px rgba(0,0,0,0.28);
 }
 .hero-text .role {
   color: var(--teal-light);
