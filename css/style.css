@@ -22,6 +22,75 @@ body {
   color: var(--text);
   background: var(--bg);
   line-height: 1.65;
+  position: relative;
+}
+
+/* Quantum-inspired animated background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(13, 148, 136, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(20, 33, 61, 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(13, 148, 136, 0.02) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: 1;
+  animation: quantumFlow 15s ease-in-out infinite;
+}
+
+/* Hexagonal lattice pattern overlay (representing crystalline structure) */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(30deg, rgba(13, 148, 136, 0.015) 1px, transparent 1px),
+    linear-gradient(150deg, rgba(13, 148, 136, 0.015) 1px, transparent 1px);
+  background-size: 60px 104px;
+  background-position: 0 0, 30px 52px;
+  pointer-events: none;
+  z-index: 1;
+  animation: latticeShift 20s linear infinite;
+}
+
+@keyframes quantumFlow {
+  0%, 100% {
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(13, 148, 136, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(20, 33, 61, 0.02) 0%, transparent 50%),
+      radial-gradient(circle at 40% 20%, rgba(13, 148, 136, 0.02) 0%, transparent 40%);
+  }
+  50% {
+    background: 
+      radial-gradient(circle at 25% 45%, rgba(13, 148, 136, 0.04) 0%, transparent 50%),
+      radial-gradient(circle at 75% 85%, rgba(20, 33, 61, 0.025) 0%, transparent 50%),
+      radial-gradient(circle at 45% 25%, rgba(13, 148, 136, 0.025) 0%, transparent 40%);
+  }
+}
+
+@keyframes latticeShift {
+  0% {
+    background-position: 0 0, 30px 52px;
+  }
+  100% {
+    background-position: 60px 104px, 90px 156px;
+  }
+}
+
+/* Ensure content sits above background */
+header,
+main,
+footer,
+section {
+  position: relative;
+  z-index: 2;
 }
 
 a { color: var(--teal); text-decoration: none; }
