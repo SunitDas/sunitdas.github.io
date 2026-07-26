@@ -30,27 +30,18 @@
   <section>
     <h2>Research Overview</h2>
     <p>
-      I am a theoretical condensed matter physicist working on <strong>quantum geometry</strong>, the
-      structure encoded in how Bloch wavefunctions evolve across the Brillouin zone, and on the transport
-      and optical phenomena it generates in real materials.
+      I work on quantum geometry in crystalline solids and on the transport and optical responses it
+      produces. Band energies alone do not determine how a material responds to applied fields. The
+      geometry of the Bloch wavefunctions, described by the Berry curvature, the quantum metric, and the
+      orbital and spin magnetic moments, also contributes. Most of my projects follow the same sequence:
+      identify a response that this geometry allows, work out the symmetry conditions under which it is
+      nonzero, estimate its magnitude in a specific material, and suggest a measurement that can detect it.
     </p>
     <p>
-      The organizing idea behind my work is simple to state and surprisingly far-reaching. A band's energy
-      dispersion alone does not determine how a material responds to fields. The <em>geometry</em> of its
-      wavefunctions, expressed through the Berry curvature, the quantum metric, orbital and spin moments,
-      and their mixed layer- and spin-resolved generalizations, contributes to conductivity, magnetization,
-      and optical response on an equal footing. Much of what I do follows one pattern: identify a response
-      that this geometry allows but conventional band theory misses, determine the symmetry conditions
-      under which it survives, compute its magnitude in a concrete material, and formulate a measurement
-      that can isolate it.
-    </p>
-    <p>
-      I work across three complementary formalisms, chosen to fit the problem. Semiclassical Boltzmann
-      transport is tractable and physically transparent. Quantum kinetic density-matrix theory is
-      necessary when interband coherence and scattering must be treated on the same footing.
-      First-principles calculations supply quantitative, material-specific predictions. A defining feature
-      of my work is close collaboration with experimental groups; several of my theoretical predictions
-      were designed around, and subsequently confirmed by, transport measurements.
+      I use semiclassical Boltzmann transport for most problems, quantum kinetic (density matrix) theory
+      when interband coherence and scattering have to be treated together, and first-principles
+      calculations for material-specific estimates. Several of these projects were carried out with
+      experimental groups, and a number of the predictions have since been measured.
     </p>
     <p>
       <strong>Systems of interest:</strong> Dirac and Weyl semimetals, Kramers-Weyl and spin-orbit coupled
@@ -60,29 +51,97 @@
   </section>
 
   <section>
+    <h2>Ongoing and Future Directions</h2>
+    <p class="section-intro">
+      The problems I am currently working on and plan to pursue next.
+    </p>
+
+    <div class="card">
+      <div class="tag">Direction 1</div>
+      <h3>Higher-order quantum geometry, nonlinear transport and optics</h3>
+      <p class="abstract">
+        Most work on quantum-geometric transport uses two quantities, the Berry curvature and the quantum
+        metric. Results on layer-orbital geometry and on hidden planar geometry suggest that these are part
+        of a larger set. When an internal degree of freedom such as layer, sublattice, valley, spin, or
+        orbital can be addressed by an external field, a corresponding resolved geometric tensor appears
+        and contributes to transport. Higher-order quantities such as the Berry connection polarizability
+        enter at second order in the field and affect intrinsic nonlinear conductivity, second-harmonic
+        generation, and photocurrents. I plan to work this out systematically for multilayer and moiré
+        systems, including rhombohedral graphene, twisted bilayers, and transition metal dichalcogenide
+        heterostructures, where these internal degrees of freedom can be tuned by gating, twist angle, and
+        displacement field. The aim is to establish which geometric quantity controls which response, and
+        how to tune between them.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="tag">Direction 2</div>
+      <h3>Correlated quantum geometry and superconducting transport</h3>
+      <p class="abstract">
+        In flat-band and moiré systems the superfluid stiffness has a geometric contribution that remains
+        finite even when the band dispersion is flat, so the superconducting properties depend on the
+        structure of the wavefunctions rather than on the band velocity. I would like to extend the methods
+        I have used for normal-state responses to this setting, and calculate the geometric contribution to
+        Josephson coupling, critical current, and nonreciprocal superconducting transport. A related
+        question is how these contributions can be separated from conventional mechanisms in experiment.
+        The symmetry analysis that determines which normal-state responses are allowed should also
+        constrain which superconducting diode and nonlinear responses can occur, and this connection has
+        not been worked out in detail.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="tag">Direction 3</div>
+      <h3>Spin, orbital, and altermagnetic responses</h3>
+      <p class="abstract">
+        Spin and orbital angular momentum transport are relevant for devices that avoid Joule heating.
+        Building on the nonlinear pure spin Hall effect and the asymmetric sublattice torque mechanism, I
+        plan to examine orbital analogues of these responses, which have received less attention than the
+        spin case, and to study altermagnets in more detail. Altermagnets show spin splitting without
+        spin-orbit coupling and have no net magnetization, so their transport signatures depend sensitively
+        on symmetry. The aim is to identify transport measurements that distinguish altermagnetic order,
+        and to propose switching schemes that can be implemented in a device geometry.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="tag">Methods</div>
+      <h3>Scattering, collision integrals, and the intrinsic and extrinsic contributions</h3>
+      <p class="abstract">
+        One formal question runs through all three directions. Intrinsic nonlinear responses associated
+        with the quantum metric are calculated using quantum kinetic theory, but different treatments of
+        the equilibrium density matrix and the collision integral give different results, some of which
+        contain dissipative terms that should not be present. I am working out how the equilibrium
+        distribution and the scattering term have to be defined consistently with one another, so that
+        field-dressed energies and disorder are handled on the same footing. This matters for
+        interpretation, since it determines whether a measured nonlinear signal can be attributed to
+        quantum geometry.
+      </p>
+    </div>
+  </section>
+
+  <section>
     <h2>Completed Research Themes</h2>
     <p class="section-intro">
-      My published work organizes into six connected themes.
+      Published work, grouped into six themes.
     </p>
 
     <div class="card">
       <div class="tag">Theme I</div>
       <h3>Chiral anomalies and nonlinear magnetotransport in Weyl systems</h3>
       <p class="abstract">
-        The chiral anomaly, the non-conservation of chiral charge and energy between Weyl nodes, is one of
-        the most striking manifestations of band topology in transport. Working within the Boltzmann
-        framework with Landau levels, we showed that inversion-symmetry-broken, tilted Weyl semimetals
-        support a finite <em>longitudinal nonlinear</em> magnetoconductivity that vanishes in untilted
-        systems, and that its intricate dependence on tilt orientation makes second-harmonic generation a
-        practical probe of the tilt geometry itself. We then established that chiral anomalies are not
-        exclusive to Weyl semimetals: 3D spin-orbit coupled (Kramers-Weyl) metals host electrical, thermal,
-        and gravitational chiral anomalies in which chiral charge is pumped between two Fermi surfaces
-        attached to a <em>single</em> node with opposite Berry curvature flux, with consequences for spin
-        thermal transport such as the spin Nernst effect. In collaboration with experiment, we extended
-        this to the correlated regime, showing that disorder-driven Kondo interactions in type-II Weyl
-        WTe<sub>2</sub> pin the Fermi level near the Weyl nodes and thereby enhance Berry-curvature-driven
-        nonequilibrium responses, producing a zero-field spontaneous Hall effect and a
-        quadratically-scaling second-harmonic Hall signal.
+        The chiral anomaly refers to the non-conservation of chiral charge and energy between Weyl nodes.
+        Using the Boltzmann framework with Landau levels, we showed that inversion-symmetry-broken tilted
+        Weyl semimetals have a finite longitudinal nonlinear magnetoconductivity, which vanishes when the
+        tilt is absent. Because it depends on the tilt orientation, second-harmonic measurements can be
+        used to determine the tilt direction. We then showed that chiral anomalies also occur in
+        three-dimensional spin-orbit coupled (Kramers-Weyl) metals, where the electrical, thermal, and
+        gravitational anomalies transfer chiral charge between two Fermi surfaces attached to a single node
+        with opposite Berry curvature flux, with consequences for the spin Nernst effect. In work with an
+        experimental group, we found that disorder-driven Kondo interactions in the type-II Weyl semimetal
+        WTe<sub>2</sub> pin the Fermi level near the Weyl nodes. This enhances Berry-curvature-driven
+        responses and produces a zero-field spontaneous Hall effect together with a second-harmonic Hall
+        signal that scales quadratically with current.
       </p>
       <div class="refs">
         <strong>References:</strong>
@@ -96,20 +155,17 @@
       <div class="tag">Theme II</div>
       <h3>Hidden planar band geometry and Hall responses in layered materials</h3>
       <p class="abstract">
-        In strictly 2D systems the conventional planar Hall effect is forbidden, because the out-of-plane
-        Berry curvature cannot couple to in-plane band velocity. We showed that quasi-2D materials
-        nevertheless host a genuine 2D planar Hall effect, sourced by <em>hidden planar</em> components of
-        the Berry curvature and orbital magnetic moment that arise from interlayer tunneling. We identified
-        every planar band-geometric contribution, classified their crystalline symmetry restrictions, and
-        demonstrated in gated bilayer graphene that the effect is additionally sensitive to Lifshitz
-        transitions. Extending the same logic to out-of-plane fields, we found that the combined action of
-        electric and magnetic fields in layered materials couples layer polarization to the orbital moment,
-        generating a <em>mixed layer-orbital</em> quantum geometry in field-dressed Bloch states. This
-        produces an intrinsic magnetoelectric Hall effect that is bilinear in E and B, scattering-time
-        independent, survives inside the band gap, and can appear even in nonmagnetic systems without
-        spin-orbit coupling, with rhombohedral pentalayer graphene as a concrete realization. Together
-        these establish hidden planar and layer-resolved geometry as a measurable, and previously
-        overlooked, resource in layered materials.
+        In a strictly two-dimensional system the planar Hall effect is forbidden, because the out-of-plane
+        Berry curvature does not couple to the in-plane band velocity. We showed that quasi-two-dimensional
+        materials still support a planar Hall effect, since interlayer tunneling generates in-plane
+        components of the Berry curvature and the orbital magnetic moment. We listed the planar
+        band-geometric contributions, worked out their crystalline symmetry restrictions, and showed that
+        in gated bilayer graphene the effect is also sensitive to Lifshitz transitions. Applying the same
+        reasoning to out-of-plane fields, we found that electric and magnetic fields together couple layer
+        polarization to the orbital moment, which produces a mixed layer-orbital geometry in field-dressed
+        Bloch states. This gives an intrinsic magnetoelectric Hall effect that is bilinear in E and B,
+        independent of the scattering time, finite inside the band gap, and possible in nonmagnetic systems
+        without spin-orbit coupling. We estimated its magnitude in rhombohedral pentalayer graphene.
       </p>
       <div class="refs">
         <strong>References:</strong>
@@ -122,15 +178,15 @@
       <div class="tag">Theme III</div>
       <h3>Odd-parity magnetoresponse as a probe of time-reversal symmetry breaking</h3>
       <p class="abstract">
-        Detecting intrinsic time-reversal symmetry (TRS) breaking is difficult in materials whose crystal
-        symmetries forbid the anomalous Hall effect. Working jointly with experiment, we demonstrated a
-        giant, gate-tunable, room-temperature odd-parity magnetoresistance in a bilayer
-        graphene/Cr<sub>2</sub>Ge<sub>2</sub>Te<sub>6</sub> heterostructure, and traced it to the coupling
-        of out-of-plane Berry curvature and orbital magnetic moment to the applied field in a TRS-broken
-        system. We subsequently developed the general theory. Onsager reciprocity forbids any longitudinal
-        magnetoconductivity linear in B when TRS is intact, so a finite B-linear longitudinal response is a
-        direct and symmetry-protected fingerprint of intrinsic TRS breaking. This gives experimentalists a
-        clean transport diagnostic precisely where the anomalous Hall effect is unavailable.
+        Intrinsic time-reversal symmetry breaking is difficult to detect in materials whose crystal
+        symmetries forbid the anomalous Hall effect. With an experimental group, we measured a large,
+        gate-tunable, room-temperature odd-parity magnetoresistance in a bilayer
+        graphene/Cr<sub>2</sub>Ge<sub>2</sub>Te<sub>6</sub> heterostructure, and attributed it to the
+        coupling of the out-of-plane Berry curvature and orbital magnetic moment to the applied field. We
+        then worked out the general theory. Onsager reciprocity forbids a longitudinal magnetoconductivity
+        linear in B when time-reversal symmetry is present, so a finite B-linear longitudinal response
+        indicates that the symmetry is broken intrinsically. This provides a transport measurement that can
+        be used in cases where the anomalous Hall effect is not available.
       </p>
       <div class="refs">
         <strong>References:</strong>
@@ -143,16 +199,16 @@
       <div class="tag">Theme IV</div>
       <h3>Generalized Onsager quantization and aperiodic quantum oscillations</h3>
       <p class="abstract">
-        Quantum oscillations are the workhorse probe of Fermi surface geometry, and their interpretation
-        rests on Onsager's semiclassical quantization rule, which predicts oscillations strictly periodic
-        in 1/B and a linear Landau fan diagram. We showed that higher-order magnetic-susceptibility
-        corrections to the free energy generalize this rule, producing a nonlinear Landau fan, a
-        field-dependent oscillation frequency, and a field-dependent cyclotron mass. We worked this out for
-        three-dimensional systems, deriving the B-dependent frequency and a generalized Lifshitz-Kosevich
-        equation, and spelling out the conditions under which the effects become observable. In parallel
-        with experiment, these signatures were observed at the LaVO<sub>3</sub>/KTaO<sub>3</sub> and
-        EuO/KTaO<sub>3</sub> interfaces, small-Fermi-surface systems where susceptibility corrections are
-        large, providing direct evidence for magnetic-field-induced Fermi surface expansion.
+        Quantum oscillation measurements are interpreted using Onsager's semiclassical quantization rule,
+        which gives oscillations periodic in 1/B and a linear Landau fan diagram. We showed that
+        higher-order magnetic susceptibility corrections to the free energy modify this rule and produce a
+        nonlinear Landau fan, a field-dependent oscillation frequency, and a field-dependent cyclotron
+        mass. We derived the field-dependent frequency and a generalized Lifshitz-Kosevich formula for
+        three-dimensional systems, and identified the conditions under which these corrections become
+        observable. In parallel work with experiment, the same features were seen at the
+        LaVO<sub>3</sub>/KTaO<sub>3</sub> and EuO/KTaO<sub>3</sub> interfaces, where the Fermi surfaces are
+        small and the susceptibility corrections are correspondingly larger, giving evidence for
+        field-induced Fermi surface expansion.
       </p>
       <div class="refs">
         <strong>References:</strong>
@@ -165,19 +221,17 @@
       <div class="tag">Theme V</div>
       <h3>Quantum-geometric spin responses and energy-efficient spintronics</h3>
       <p class="abstract">
-        A recurring goal in spintronics is to move spin angular momentum without moving charge, avoiding
-        Joule heating. We introduced the intrinsic nonlinear pure spin Hall effect, in which both linear
-        and second-order charge Hall currents vanish while second-order spin transport survives. A full
-        symmetry analysis identified the 39 magnetic point groups that permit it, and first-principles
-        calculations predict a sizable effect in the Kramers-Weyl metal RhGe even at room temperature. On
-        the optical side, we showed that light-induced nonlinear spin magnetization becomes the dominant
-        magnetization channel in centrosymmetric materials, resolved its distinct quantum-geometric
-        contributions, and predicted a helicity-dependent response in the antiferromagnet CuMnAs that
-        reverses with light helicity. Turning to magnetic order itself, we found that collinear
-        altermagnets, unlike conventional antiferromagnets, host <em>unequal</em> sublattice spin torques.
-        These enable field-free, deterministic 180° Néel vector switching on picosecond timescales, even in
-        centrosymmetric, weakly spin-orbit-coupled systems where the Néel spin-orbit torque mechanism
-        fails.
+        One aim in spintronics is to transport spin angular momentum without a net charge current. We
+        described an intrinsic nonlinear pure spin Hall effect, in which the linear and second-order charge
+        Hall currents vanish while the second-order spin transport remains finite. A symmetry analysis
+        identified the 39 magnetic point groups that allow it, and first-principles calculations gave a
+        sizeable effect in the Kramers-Weyl metal RhGe at room temperature. We also showed that
+        light-induced nonlinear spin magnetization is the leading magnetization response in centrosymmetric
+        materials, separated its quantum-geometric contributions, and predicted a helicity-dependent
+        response in the antiferromagnet CuMnAs. In a related study we found that collinear altermagnets
+        have unequal sublattice spin torques, unlike conventional antiferromagnets. This allows field-free
+        180° Néel vector switching on picosecond timescales in centrosymmetric systems with weak spin-orbit
+        coupling, where the Néel spin-orbit torque mechanism does not operate.
       </p>
       <div class="refs">
         <strong>References:</strong>
@@ -191,19 +245,17 @@
       <div class="tag">Theme VI</div>
       <h3>Valley physics and strain-engineered gauge fields in graphene</h3>
       <p class="abstract">
-        Nonuniform strain in graphene acts as a valley-dependent gauge field, generating pseudomagnetic
-        fields that mimic real magnetic fields while preserving global time-reversal symmetry. Although
-        local probes had visualized such fields, quantitative detection through macroscopic transport
-        remained elusive. Together with experiment, we showed that high-mobility graphene develops distinct
-        beating patterns in Shubnikov-de Haas oscillations from valley-resolved Landau quantization under
-        different effective fields, and that the universal scaling of the node carrier density and filling
-        factor with applied field allows pseudomagnetic fields as small as a few millitesla to be
-        extracted. We have since generalized this into a diagnostic framework. Because strain, valley
-        imbalance, valley-dependent energy shifts, spin-orbit splitting, and Kekulé distortion each produce
-        a distinct scaling of the beating nodes with carrier density and field, the beating pattern itself
-        identifies which mechanism is at play. I also contributed to a community Roadmap surveying the
-        state and open challenges of 2D valleytronics, spanning valley Hall effects, lightwave
-        valleytronics, flat-band valleytronics, and spin-valley qubits.
+        Nonuniform strain in graphene acts as a valley-dependent gauge field and produces pseudomagnetic
+        fields, while the global time-reversal symmetry is preserved. Such fields had been imaged locally,
+        but were difficult to quantify in a transport measurement. With an experimental group, we showed
+        that high-mobility graphene shows beating in the Shubnikov-de Haas oscillations because the two
+        valleys are quantized under different effective fields, and that the scaling of the node carrier
+        density and filling factor with the applied field allows pseudomagnetic fields of a few millitesla
+        to be extracted. We have since extended this into a diagnostic method. Strain, valley imbalance,
+        valley-dependent energy shifts, spin-orbit splitting, and Kekulé distortion each give a different
+        scaling of the beating nodes with carrier density and field, so the beating pattern indicates which
+        mechanism is present. I also contributed to a Roadmap article on valleytronics in two-dimensional
+        materials.
       </p>
       <div class="refs">
         <strong>References:</strong>
@@ -211,83 +263,6 @@
         <a href="https://arxiv.org/abs/2606.20339" target="_blank" rel="noopener">arXiv:2606.20339</a>;
         <a href="https://arxiv.org/abs/2603.01427" target="_blank" rel="noopener">arXiv:2603.01427</a>.
       </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Ongoing and Future Directions</h2>
-    <p class="section-intro">
-      Where I intend to take this work next, building on the themes above and increasingly aimed at
-      turning quantum geometry from a descriptive language into a predictive, design-oriented one.
-    </p>
-
-    <div class="card">
-      <div class="tag">Direction 1</div>
-      <h3>Higher-order quantum geometry, nonlinear transport and optics</h3>
-      <p class="abstract">
-        Most quantum-geometric transport theory rests on two objects, the Berry curvature and the quantum
-        metric, defined for charge in a single-band-index sense. My recent work on mixed layer-orbital
-        geometry and hidden planar geometry suggests these are special cases of a much richer structure.
-        Whenever an internal degree of freedom (layer, sublattice, valley, spin, orbital) can be addressed
-        by an external field, a corresponding <em>resolved</em> geometric tensor appears and sources its own
-        response. Higher-order objects such as the Berry connection polarizability enter at second order in
-        the field and control intrinsic nonlinear conductivity, second-harmonic generation, and
-        photocurrents. I want to develop this systematically and apply it to multilayer and moiré
-        platforms, including rhombohedral graphene, twisted bilayers, and TMD heterostructures, where the
-        internal degrees of freedom are both numerous and experimentally tunable by gating, twist angle,
-        and displacement field. The aim is a unified account of which geometric object controls which
-        response, and how to switch between them <em>in situ</em>.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="tag">Direction 2</div>
-      <h3>Correlated quantum geometry and superconducting transport</h3>
-      <p class="abstract">
-        Quantum geometry does not switch off when interactions dominate; it reorganizes. In flat-band and
-        moiré systems the superfluid stiffness has an irreducibly geometric contribution, so
-        superconductivity there is controlled by wavefunction structure rather than by dispersion. I want
-        to extend the machinery I have developed for normal-state responses into this regime, asking how
-        the geometric contribution to Josephson coupling, critical current, and nonreciprocal
-        (diode-like) superconducting transport can be computed and, more importantly, distinguished
-        experimentally from conventional mechanisms. The same symmetry logic that governs which normal-state
-        responses are allowed should constrain which superconducting diode and nonlinear responses can
-        appear, and this connection seems largely unexploited.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="tag">Direction 3</div>
-      <h3>Spin, orbital, and altermagnetic responses</h3>
-      <p class="abstract">
-        Charge is only one of the currents a crystal can carry, and spin and orbital angular momentum
-        transport are what matter for low-dissipation device functionality. Building on the nonlinear pure
-        spin Hall effect and the asymmetric sublattice torque mechanism, I want to push toward orbital
-        analogues of these responses, which are far less understood than their spin counterparts, and
-        toward altermagnets specifically. Altermagnets combine nonrelativistic spin splitting with a
-        vanishing net moment, which makes their transport signatures unusually sensitive to symmetry and
-        unusually attractive for memory applications. My goal is to identify measurable transport
-        fingerprints of altermagnetic order and realistic switching protocols, stated in quantities an
-        experimentalist can access directly.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="tag">Methods thread</div>
-      <h3>Foundations: scattering, collision integrals, and the intrinsic-extrinsic divide</h3>
-      <p class="abstract">
-        Cutting across all three directions is a formal question that is currently unsettled. Intrinsic
-        nonlinear responses sourced by the quantum metric are among the most actively studied quantities in
-        quantum transport, and also among the most disputed. The disagreement is not about the geometry but
-        about the kinetics. Different treatments of the equilibrium density matrix and the collision
-        integral in quantum kinetic theory yield different, sometimes unphysical, answers, including
-        dissipative contributions that should not exist. I am working out explicitly how the equilibrium
-        distribution and the scattering term must be defined consistently with one another, so that
-        field-dressed energies and disorder are treated on the same footing. Settling this matters well
-        beyond the formalism, since it determines whether a measured nonlinear signal can legitimately be
-        read as a quantum-geometric quantity, which is precisely what a growing body of experiments
-        assumes.
-      </p>
     </div>
   </section>
 
