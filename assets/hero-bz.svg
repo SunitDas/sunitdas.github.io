@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="440" viewBox="0 0 440 440">
+  <defs>
+    <radialGradient id="cone" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#5eead4" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#5eead4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- soft glow behind the Brillouin zone -->
+  <circle cx="220" cy="220" r="190" fill="url(#cone)"/>
+
+  <!-- hexagonal Brillouin zone -->
+  <g fill="none" stroke="#7dd3fc" stroke-opacity="0.40" stroke-width="1.8">
+    <path d="M 220 70 L 350 145 L 350 295 L 220 370 L 90 295 L 90 145 Z"/>
+  </g>
+  <g fill="none" stroke="#5eead4" stroke-opacity="0.22" stroke-width="1.1">
+    <path d="M 220 120 L 307 170 L 307 270 L 220 320 L 133 270 L 133 170 Z"/>
+  </g>
+
+  <!-- high-symmetry points: Gamma, K, K' -->
+  <g fill="#5eead4" fill-opacity="0.75">
+    <circle cx="220" cy="220" r="4"/>
+  </g>
+  <g fill="#7dd3fc" fill-opacity="0.8">
+    <circle cx="220" cy="70"  r="4.5"/>
+    <circle cx="350" cy="295" r="4.5"/>
+    <circle cx="90"  cy="295" r="4.5"/>
+  </g>
+  <g fill="#f0abfc" fill-opacity="0.7">
+    <circle cx="350" cy="145" r="4.5"/>
+    <circle cx="220" cy="370" r="4.5"/>
+    <circle cx="90"  cy="145" r="4.5"/>
+  </g>
+
+  <!-- Gamma to K to M path -->
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1" stroke-dasharray="4 5">
+    <path d="M 220 220 L 220 70 L 350 145 L 220 220"/>
+  </g>
+
+  <!-- Berry curvature field loops around a valley -->
+  <g fill="none" stroke="#7dd3fc" stroke-opacity="0.28" stroke-width="1.2">
+    <ellipse cx="220" cy="70" rx="26" ry="14" transform="rotate(-18 220 70)"/>
+    <ellipse cx="220" cy="70" rx="42" ry="23" transform="rotate(-18 220 70)"/>
+  </g>
+  <g fill="none" stroke="#f0abfc" stroke-opacity="0.24" stroke-width="1.2">
+    <ellipse cx="350" cy="145" rx="26" ry="14" transform="rotate(22 350 145)"/>
+    <ellipse cx="350" cy="145" rx="42" ry="23" transform="rotate(22 350 145)"/>
+  </g>
+</svg>
